@@ -8,5 +8,17 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/scripts'
-  ]
+  ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "/assets/scss/mixins.scss" as *;
+            `,
+          silenceDeprecations: ["mixed-decls"],
+        },
+      },
+    },
+  },
 })
