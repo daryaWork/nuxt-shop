@@ -31,10 +31,12 @@ export default withNuxt([
         ecmaVersion: 'latest',
         sourceType: 'module',
       }
-    },
+    }
+  },
+  {
     rules: {
-      // Ваши правила Vue
-      'vue/script-setup-uses-vars': 'error', // Важно для script setup
+      'vue/multi-word-component-names': 'off',
+      'vue/no-multiple-template-root': 'off'
     }
   },
   {

@@ -7,8 +7,18 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxt/scripts'
+    '@nuxt/scripts',
+    '@nuxt/icon',
   ],
+  icon: {
+    mode: "svg",
+    customCollections: [
+      {
+        prefix: "icon",
+        dir: "./assets/icons",
+      }
+    ]
+  },
   vite: {
     css: {
       preprocessorOptions: {

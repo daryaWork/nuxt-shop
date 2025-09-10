@@ -1,9 +1,18 @@
 <template>
   <section class="error-page">
-  <h1 class="error-page__title">{{ error.statusCode }} ошибка</h1>
-  <p class="error-page__text">{{ statusMessage }}</p>
-  <ActionButton type="ghost" @click="() => navigateTo('/')">Главная страница</ActionButton>
-</section>
+    <h1 class="error-page__title">
+      {{ error.statusCode }} ошибка
+    </h1>
+    <p class="error-page__text">
+      {{ statusMessage }}
+    </p>
+    <ActionButton
+      type="ghost"
+      @click="() => navigateTo('/')"
+    >
+      Главная страница
+    </ActionButton>
+  </section>
 </template>
 
 <script lang="ts" setup>
